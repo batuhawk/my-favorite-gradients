@@ -1,0 +1,287 @@
+@import url('colors.scss');
+@import url('breakpoints.scss');
+
+:root {
+    --font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: var(--font-family);
+    background-color: var(--white);
+}
+
+body,
+#app {
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 150px 0;
+    padding: 100px 0 0 0;
+
+    background-color: var(--white);
+
+    .row {
+        height: 100%;
+        max-width: 1600px;
+        width: 100%;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .title {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            align-self: flex-start;
+
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: var(--lighter-grey);
+
+
+    .description {
+        height: 150px;
+        max-width: 1600px;
+        width: 100%;
+    
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        margin: -75px 0 0 0;
+        padding: 30px;
+
+        border: 1px solid var(--light-grey);
+        border-radius: 8px;
+
+        background-color: var(--white);
+
+        font-size: 18px;
+        font-weight: 100;
+        letter-spacing: 4px;
+    }
+
+    .row {
+        height: 100%;
+        max-width: 1600px;
+        width: 100%;
+
+        display: grid;
+        grid-gap: 36px;
+        grid-template-columns: repeat(auto-fill, minmax(373px, 1fr));
+    
+        padding: 100px 0 0 0;
+
+        .gradient {
+            height: 380px;
+            max-width: 380px;
+            width: 100%;
+
+            border-radius: 8px;
+    
+            cursor: pointer;
+
+            //&:hover {}
+        }
+
+        .gradient-detail {
+            max-height: 400px;
+            height: 100%;
+            max-width: 600px;
+            width: 100%;
+
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            border-radius: 8px;
+            background-color: var(--white);
+            box-shadow: -10px 50px 80px var(--black);
+
+            
+            .close-button {
+                height: 35px;
+                width: 35px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                position: absolute;
+                right: -15px;
+                top: -15px;
+                z-index: 2;
+
+                font-size: 20px;
+                font-weight: 600;
+
+                border-radius: 50%;
+                background-color: var(--dark-grey);
+
+                cursor: pointer;
+            }
+
+            .content {
+                height: 100%;
+                width: 100%;
+
+                position: relative;
+
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+
+                padding: 20px;
+
+                border-radius: inherit;
+
+
+                .main-gradient {
+                    height: 175px;
+                    width: 100%;
+                    border-radius: 8px;
+                }
+
+                .gradient-colors {
+                    height: 40px;
+                    width: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-direction: row;
+
+                    margin: 10px 0 0 0;
+
+                    .color-one,
+                    .color-two {
+                        height: 100%;
+                        width: calc(80% / 2);
+                        
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: row;
+                        
+                        background-color: var(--grey);
+                        color: var(--black);
+
+                        border: 1px solid var(--dark-grey);
+                        border-radius: 4px;
+
+                        .color {
+                            height: 27px;
+                            width: 27px;
+
+                            margin: 0 10px 0 0;
+
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .gradient-css {
+                    height: 125px;
+                    width: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    margin: 10px 0 0 0;
+
+                    .gradient-info {
+                        height: 75px;
+                        width: 100%;
+    
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        background-color: var(--grey);
+
+                        border-radius: 8px;
+                        border: 1px solid var(--dark-grey);
+                    }
+
+                    .copy-button {
+                        height: 40px;
+                        width: 100px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        align-self: flex-end;
+
+                        margin: 10px 0 0 0;
+
+                        background-color: #0D1FEC;
+                        color: antiquewhite;
+
+                        border-radius: 4px;
+                        cursor: pointer;
+
+                        &:hover {
+                            transition: box-shadow 0.5s;
+                            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

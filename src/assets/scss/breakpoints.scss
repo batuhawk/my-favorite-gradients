@@ -1,0 +1,66 @@
+$breakpoints: (
+    'xs': 0,
+    'sm': 480px,
+    'md': 720px,
+    'lg': 960px,
+    'xl': 1200px,
+    'xxl': 1600px,
+);
+
+@mixin xs {
+    @media (max-width: map-get($breakpoints, 'xs')) {
+        @content;
+    }
+}
+@mixin sm {
+    @media (max-width: map-get($breakpoints, 'sm')) {
+        @content;
+    }
+}
+@mixin md {
+    @media (max-width: map-get($breakpoints, 'md')) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (max-width: map-get($breakpoints, 'lg')) {
+        @content;
+    }
+}
+@mixin xl {
+    @media (max-width: map-get($breakpoints, 'xl')) {
+        @content;
+    }
+}
+@mixin xxl {
+    @media (max-width: map-get($breakpoints, 'xxl')) {
+        @content;
+    }
+}
+
+@mixin breakpoint($bp: 0) {
+    @media (min-width: $bp) {
+        @content;
+    }
+}
+
+.header,
+.content .row,
+ .content .description {
+    @include xxl {
+        width: 90% !important;
+    }
+}
+
+.content .row .gradient {
+    @include xxl {
+        height: 450px !important;
+        max-width: 450px !important;
+    }
+}
+
+.content .row .gradient {
+    @include lg {
+        justify-self: center;
+    }
+}
